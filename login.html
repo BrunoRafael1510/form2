@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <form action="" class="form_main">
-            <p class="heading">Login SENAI</p>
+            <p class="heading">Login - SENAI</p>
             <div class="inputContainer">
                 <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
                     viewBox="0 0 16 16">
@@ -33,8 +33,14 @@
             </div>
 
 
-            <button id="button" onclick="verifica()">Entrar</button>
-            <a class="forgotLink" href="#">Esqueceu sua senha??</a>
+            <div id="botaoCad">
+                <div id="loginCad">
+                    <button class="button" id="botaoEntrar" onclick="verifica()">Entrar</button>
+                </div>
+                <div id="cadastroCad">
+                    <button class="button" id="botaoCadastro" onclick="verifica()">Cadastrar</button>
+                </div>
+            </div>
         </form>
     </div>
 </body>

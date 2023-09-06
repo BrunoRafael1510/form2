@@ -1,31 +1,48 @@
-function verifica() {
-    /* pegando os valores do email e semha */
-    let email = document.querySelector("#username").value;
-    let senha = document.getElementById('password').value;
+/* Criando evento botão */
+document.getElementById('botaoEntrar')
+    .addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+
+document.getElementById('botaoCadastro')
+    .addEventListener('click', (e) => {
+        e.preventDefault
+        window.open("../assets/cadastroUser.html")
+    });
+
+function verificar() {
+    let email = document.getElementById('username').value
+    let senha = document.getElementById('password').value
 
     if (email == "" || senha == "") {
-        alert("Obrigatório o preenchimento do email e senha");
-        document.querySelector("#username").focus()
+        alert("Obrigatório preenchimento de todos os campos")
+        document.getElementById("username").focus();
     } else {
-        pesquisa(email, senha);
-    };
-
-};
-
-function pesquisa(email, senha) {
-
-    if (email == "Brunin" && senha == "123456") {
-        
-        window.open("../assets/index.html");
-        window.close();
-        
-    } else {
-        alert("Email ou senha inválido");
-        document.querySelector("#username").focus()
+        consultar(email, senha);
     }
 };
 
-function cadastro() {
-    let cadastro = {};
+function consultar(email, senha) {
+    let usuarios = new Array();//Aqui estamos definindo uma matriz
 
+    //Verificando se a chave usuarios existe no local 
+    if (localStorage.hasOwmProperty('usuarios')) {
+        //Recuperar os valores da propiedade usuarios do localStorage
+        //Convertendo o USUARIOS em objetos para podermos usar as propiedades;
+
+        usuarios = JSON.parse(localStorage.getItem('usuarios'))
+
+    }
+
+    for (let i = 0; i < usuarios.length; i++) {
+
+        if (usuarios[i].email == email && usuarios[i].senha == senha) {
+            window.open("../assets/index.html")
+            window.close();
+            break;
+        }
+    }
+    alert("Email ou Senha invalidos");
+    document.getElementById('username').focus;
 }
+
