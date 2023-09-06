@@ -8,11 +8,7 @@
 <link rel="stylesheet" href="../css/estilo.css">
 <body>
 
-	<div class="titulo">
-		<h1>User cep</h1>
-	</div>
-
-	<div class="cadastro" id="log1n">
+	<div class="cadastro" id="cadastro">
 
 		<div id="nomeCad">
 			<label for="nome">nome:</label>
@@ -20,11 +16,11 @@
 		</div>
 		<div id="cepCa">
 			<label for="cep">cep:</label>
-			<input type="text" id="cep" maxlength="9"> 
+			<input type="text" id="cep" maxlength="9">
 		</div>
 		<div id="ruaCad">
 			<label for="rua">rua:</label>
-			<input type="text" id="rua" maxlength="45">
+			<input type="text" id="rua" maxlength="45" readonly>
 		</div>
 		<div id="bairroCad">
 			<label for="Bairro">Bairro:</label>
@@ -43,8 +39,8 @@
 			<input type="email" id="email" maxlength="45">
 		</div>
 		<div id="botaoCad">
-
-			<button id="botao" onclick="limpaForm()">Cadastrar</button>
+			<!--<button onclick="verificar()">Cadastro</button> -->
+			<button id="botao" onclick="verificar()">Cadastrar</button>
 		</div>
 	</div>
 	
@@ -52,13 +48,6 @@
 
 </body>
 <script src="../js/main.js"></script>
-<script src="../js/limpa.js"></script>
-<script src="../js/cep.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"	></script>
-
-<script>
-	$('#cep').mask('00000-000');
-</script>
+<script src="../js/cadastrocliente.js"></script>
 
 </html>

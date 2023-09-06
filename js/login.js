@@ -1,5 +1,5 @@
 /* Criando evento botão */
-document.getElementById('botaoEntrar')
+document.getElementById('botaoLogin')
     .addEventListener('click', (e) => {
         e.preventDefault();
     })
