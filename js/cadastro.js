@@ -11,7 +11,7 @@ addEventListener('click', (e) => {
 }
 );
 
-Document.getElementById('botaoCad')
+document.getElementById('botaoCad')
     .addEventListener('click', (e) => {
         e.preventDefault();
         if (email.value !== "" || senha.value == "") {
@@ -31,7 +31,7 @@ function cadastro() {
 
     let email = document.getElementById('email');
     let senha = document.getElementById('senha');
-    let ususarios = new Array();
+    let usuarios = new Array();
 }
 //Verificando se exitste USUARIO no Storage
 if (localStorage.hasOwnProperty('usuarios')) {
